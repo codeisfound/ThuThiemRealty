@@ -14,11 +14,18 @@
         header {
             background: rgba(0, 0, 0, 0.7);
             display: flex;
-            justify-content: space-between;
+            align-items: center; /* Center items vertically */
             padding: 20px;
             position: fixed;
             width: 100%;
             z-index: 1000;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px; /* Set a max width for the header */
+            margin: 0 auto; /* Center the container */
         }
         .logo img {
             height: 40px;
@@ -27,6 +34,8 @@
             list-style: none;
             display: flex;
             gap: 20px;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
         }
         nav a {
             color: white;
@@ -40,53 +49,25 @@
             align-items: center;
             justify-content: center;
         }
-        .video-container {
-            width: 100%;
-            height: 100%;
-        }
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .content {
-            padding: 60px 20px;
-            text-align: center;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Thủ Thiêm Realty Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <div class="logo">
-        <img src="img/logo.png" alt="Thu Thiem Realty Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#about">Giới Thiệu</a></li>
-            <li><a href="#properties">Tài Sản</a></li>
-            <li><a href="#contact">Liên Hệ</a></li>
-        </ul>
-    </nav>
-</header>
 
 <section class="hero">
     <div class="video-container">
